@@ -52,48 +52,9 @@ st.set_page_config(
     page_icon="🧊",
     layout="wide",
 )
+st.title("🧊 CareerCraft")
 
 avs.add_vertical_space(4)
-
-# here is the introduction
-col1, col2 = st.columns([3, 2])
-with col1:
-    st.title("CareerCraft")
-    st.header("Navigate the Job Market with Confidence!")
-    st.markdown("""<p style='text-align: justify;'>
-        Introducing CareerCraft, an ATS-Optimized Resume Analyzer your ultimate solution for optimizing
-        job applications and accelerating career growth. Our innovative platform leverages advanced ATS
-        technology to provide job seekers with valuable insights into their resumes' compatibility with
-        job descriptions. From resume optimization and skill enhancement to career progression guidance,
-        CareerCraft empowers users to stand out in today's competitive job market. Streamline your job
-        application process, enhance your skills, and navigate your career path with confidence. Join
-        CareerCraft today and unlock new opportunities for professional success!</p>""", 
-        unsafe_allow_html=True
-    )
-
-
-with col2:
-    st.image(
-        'https://cdn.dribbble.com/userupload/12500996/file/original-b458fe398a6d7f4e9999ce66ec856ff9.gif',
-        use_column_width=True,
-    )
-
-avs.add_vertical_space(10)
-
-# here are the offerings
-col1, col2 = st.columns([3, 2])
-with col1:
-    st.header("Wind Energy Offerings")
-    st.write('ATS Optimization')
-    st.write('Resume Analysis')
-    st.write('Tailored Profile Enhancement')
-    st.write('Skill Enhancement Guidance')
-    st.write('Streamlined Application Process')
-    st.write('Personalized Recommendations')
-with col2:
-    img1 = Image.open("images/icon1.png")
-    st.image(img1, use_column_width=True)
-
 
 # ATS tracking application
 col1, col2 = st.columns([3, 2])
@@ -113,10 +74,50 @@ with col1:
             st.error("Please upload the resume")
 
 with col2:
-    img2 = Image.open("images/icon2.png")
-    st.image(img2, use_column_width=True)
+    st.image('https://cdn.dribbble.com/userupload/12500996/file/original-b458fe398a6d7f4e9999ce66ec856ff9.gif', use_column_width=True)
 
 avs.add_vertical_space(10)
+
+
+
+# here is the introduction
+col1, col2 = st.columns([3, 2])
+with col1:
+    st.header("Navigate the Job Market with Confidence!")
+    st.markdown("""<p style='text-align: justify;'>
+        Introducing CareerCraft, an ATS-Optimized Resume Analyzer your ultimate solution for optimizing
+        job applications and accelerating career growth. Our innovative platform leverages advanced ATS
+        technology to provide job seekers with valuable insights into their resumes' compatibility with
+        job descriptions. From resume optimization and skill enhancement to career progression guidance,
+        CareerCraft empowers users to stand out in today's competitive job market. Streamline your job
+        application process, enhance your skills, and navigate your career path with confidence. Join
+        CareerCraft today and unlock new opportunities for professional success!</p>""", 
+        unsafe_allow_html=True
+    )
+
+
+with col2:
+    img2 = Image.open("images/icon2.png")
+    st.image(
+        img2,
+        use_column_width=True,
+    )
+
+avs.add_vertical_space(10)
+
+# here are the offerings
+col1, col2 = st.columns([3, 2])
+with col1:
+    st.header("Wind Energy Offerings")
+    st.write('ATS Optimization')
+    st.write('Resume Analysis')
+    st.write('Tailored Profile Enhancement')
+    st.write('Skill Enhancement Guidance')
+    st.write('Streamlined Application Process')
+    st.write('Personalized Recommendations')
+with col2:
+    img1 = Image.open("images/icon1.png")
+    st.image(img1, use_column_width=True)
 
 
 
