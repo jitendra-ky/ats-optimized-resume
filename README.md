@@ -7,3 +7,4 @@ this is a application that optimize the resume using gemini pretrained model
 '''
 GOOGLE_API_KEY="[your api key]"
 '''
+I just removed .env for security reasons
