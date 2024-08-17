@@ -54,6 +54,10 @@ st.set_page_config(
 )
 st.title("🧊 CareerCraft")
 
+# Display a message with a LinkedIn profile link
+st.write("Developed by [Jitendra-Kumar](https://www.linkedin.com/in/jitendra-ky)")
+
+
 avs.add_vertical_space(4)
 
 # ATS tracking application
