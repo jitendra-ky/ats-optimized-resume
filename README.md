@@ -27,7 +27,7 @@ Check out the live demo of the app: [CareerCraft](https://career-craft.streamlit
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/ats-optimized-resume.git
+   git clone https://github.com/zsquare12/ats-optimized-resume.git
    cd ats-optimized-resume
    ```
 
