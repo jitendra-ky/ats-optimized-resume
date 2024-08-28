@@ -24,7 +24,7 @@ avs.add_vertical_space(4)
 
 key = os.getenv('GOOGLE_API_KEY')
 "get the API KEY"
-print(key[0:5])
+st.write(len(key))
 genai.configure(api_key=key)
 
 
