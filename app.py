@@ -7,7 +7,8 @@ import PyPDF2
 from PIL import Image
 
 load_dotenv()
-genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+key="AIzaSyA7DPMBYgeuLSySIB7hDHNeF8qFahSjzB4"
+genai.configure(api_key=key)
 
 model = genai.GenerativeModel('gemini-pro')
 
