@@ -7,12 +7,33 @@ import PyPDF2
 from PIL import Image
 
 load_dotenv()
-genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+
+# set page config
+st.set_page_config(
+    page_title="Resume ATS Tracker",
+    page_icon="🧊",
+    layout="wide",
+)
+st.title("🧊 CareerCraft")
+
+# Display a message with a LinkedIn profile link
+st.write("Developed by [Jitendra-Kumar](https://www.linkedin.com/in/jitendra-ky)")
+
+
+avs.add_vertical_space(4)
+
+key = os.getenv('GOOGLE_API_KEY')
+"get the API KEY"
+st.write(key[0:5])
+genai.configure(api_key=key)
+
 
 model = genai.GenerativeModel('gemini-pro')
 
 def get_gemini_response(prompt):
+    st.write("Generating response...")
     response = model.generate_content(prompt)
+    st.write("Response generated!")
     return response.text
 
 def input_pdf_text(uploaded_file):
@@ -46,19 +67,7 @@ def analyse_resume(resume_txt, job_description):
     return get_gemini_response(prompt)
 
 
-# set page config
-st.set_page_config(
-    page_title="Resume ATS Tracker",
-    page_icon="🧊",
-    layout="wide",
-)
-st.title("🧊 CareerCraft")
 
-# Display a message with a LinkedIn profile link
-st.write("Developed by [Jitendra-Kumar](https://www.linkedin.com/in/jitendra-ky)")
-
-
-avs.add_vertical_space(4)
 
 # ATS tracking application
 col1, col2 = st.columns([3, 2])
