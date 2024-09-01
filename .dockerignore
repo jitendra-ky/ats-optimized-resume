@@ -1,0 +1,6 @@
+.venv
+.env
+test.ipynb
+text.py
+.git
+.gitignore
