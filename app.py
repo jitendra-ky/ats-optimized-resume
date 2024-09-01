@@ -10,11 +10,11 @@ load_dotenv()
 
 # set page config
 st.set_page_config(
-    page_title="Resume ATS Tracker",
-    page_icon="🧊",
+    page_title="CareerCraft",
+    page_icon="📃",
     layout="wide",
 )
-st.title("🧊 CareerCraft")
+st.title("📃 CareerCraft")
 
 # Display a message with a LinkedIn profile link
 st.write("Developed by [Jitendra-Kumar](https://www.linkedin.com/in/jitendra-ky)")
