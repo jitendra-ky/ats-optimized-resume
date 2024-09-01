@@ -28,12 +28,12 @@ jobs:
       # Step 4: Build and tag the Docker image
       - name: Build and tag Docker image
         run: |
-          docker build -t jitenky/stapp3906:latest .
+          docker build -t jitenky/career-craft:latest .
 
       # Step 5: Push the Docker image to Docker Hub
       - name: Push Docker image to Docker Hub
         run: |
-          docker push jitenky/stapp3906:latest
+          docker push jitenky/career-craft:latest
 
   restart:
     permissions:
