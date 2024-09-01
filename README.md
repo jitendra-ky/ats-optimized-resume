@@ -78,4 +78,4 @@ Contributions are welcome! If you find any issues or have suggestions for new fe
 
 ## Acknowledgments
 
-This project was developed during an internship at [SmartBridge](https://www.linkedin.com/company/smartbridge/mycompany/verification/). Special thanks to the mentors and the team for their support and guidance.
+This project was developed during an internship at [SmartBridge](https://www.linkedin.com/company/smartbridge/mycompany/verification/). Special thanks to the mentors and the team for their support and guidance. 
