@@ -24,9 +24,6 @@ avs.add_vertical_space(4)
 
 # key = os.getenv('GOOGLE_API_KEY')
 key ="AIzaSyA7DPMBYgeuLSySIB7hDHNeF8qFahSjzB4"
-"get the API KEY"
-# if len(key) >5:
-#     st.write("API key found")
 genai.configure(api_key=key)
 
 
@@ -95,55 +92,77 @@ avs.add_vertical_space(10)
 
 
 
-# here is the introduction
-col1, col2 = st.columns([3, 2])
-with col1:
-    st.header("Navigate the Job Market with Confidence!")
-    st.markdown("""<p style='text-align: justify;'>
-        Introducing CareerCraft, an ATS-Optimized Resume Analyzer your ultimate solution for optimizing
-        job applications and accelerating career growth. Our innovative platform leverages advanced ATS
-        technology to provide job seekers with valuable insights into their resumes' compatibility with
-        job descriptions. From resume optimization and skill enhancement to career progression guidance,
-        CareerCraft empowers users to stand out in today's competitive job market. Streamline your job
-        application process, enhance your skills, and navigate your career path with confidence. Join
-        CareerCraft today and unlock new opportunities for professional success!</p>""", 
-        unsafe_allow_html=True
-    )
 
+
+
+
+# Here is the introduction
+col1, col2 = st.columns([3, 3])
+with col1:
+    st.header("🤵 Navigate the Job Market with Confidence!")
+    st.markdown("""
+        <p style='text-align: justify; font-size: 18px;'>
+        Introducing <strong>CareerCraft</strong>, an <em>ATS-Optimized Resume Analyzer</em>—your ultimate solution 
+        for optimizing job applications and accelerating career growth. Our innovative platform leverages advanced 
+        ATS technology to provide job seekers with valuable insights into their resumes' compatibility with job 
+        descriptions. From resume optimization and skill enhancement to career progression guidance, 
+        <strong>CareerCraft</strong> empowers users to stand out in today's competitive job market. 
+        Streamline your job application process, enhance your skills, and navigate your career path with confidence. 
+        Join <strong>CareerCraft</strong> today and unlock new opportunities for professional success!
+        </p>
+        """, unsafe_allow_html=True)
 
 with col2:
-    img2 = Image.open("images/icon2.png")
-    st.image(
-        img2,
-        use_column_width=True,
-    )
+    # Embed YouTube video
+    st.video("https://youtu.be/-C5RDNQNT1c?si=bFBaWwzr0Be7fCnd")
 
 avs.add_vertical_space(10)
 
-# here are the offerings
+
+
+
+
+
+
+
+# Here are the offerings
 col1, col2 = st.columns([3, 2])
 with col1:
-    st.header("Wind Energy Offerings")
-    st.write('ATS Optimization')
-    st.write('Resume Analysis')
-    st.write('Tailored Profile Enhancement')
-    st.write('Skill Enhancement Guidance')
-    st.write('Streamlined Application Process')
-    st.write('Personalized Recommendations')
+    st.header("🌟 Wind Energy Offerings 🌟")
+    st.markdown("<p style='font-size: 18px;'>🔍 <strong>ATS Optimization</strong></p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size: 18px;'>📄 <strong>Resume Analysis</strong></p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size: 18px;'>🎯 <strong>Tailored Profile Enhancement</strong></p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size: 18px;'>📈 <strong>Skill Enhancement Guidance</strong></p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size: 18px;'>🚀 <strong>Streamlined Application Process</strong></p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size: 18px;'>💡 <strong>Personalized Recommendations</strong></p>", unsafe_allow_html=True)
 with col2:
-    img1 = Image.open("images/icon1.png")
+    img1 = Image.open("images/Job-Employment-PNG-Image.png")
     st.image(img1, use_column_width=True)
+
+
+
+
+
 
 
 
 # FAQ section
 faqs = """
 Question: How does CareerCraft analyze resumes and job descriptions?
-Answer: CareerCraft uses advanced algorithms to analyze resumes and job descriptions, identifying key keywords and assessing compatibility between the two.
+Answer: CareerCraft leverages advanced AI algorithms, powered by Google Gemini, to thoroughly examine your resume and the provided job description. It identifies crucial keywords, evaluates the alignment of your qualifications with the job requirements, and assesses the overall compatibility between the two. This process ensures your resume is optimized for Applicant Tracking Systems (ATS) and increases your chances of securing an interview.
+
 Question: Can CareerCraft suggest improvements for my resume?
-Answer: Yes, CareerCraft provides personalized recommendations to optimize your resume for specific job openings, including suggestions for missing keywords and alignment with desired job roles.
+Answer: Absolutely! CareerCraft provides personalized, actionable recommendations to enhance your resume. It identifies missing keywords that are critical to the job description, suggests ways to better align your experience and skills with the job role, and offers advice on how to optimize your resume for maximum impact.
+
 Question: Is CareerCraft suitable for both entry-level and experienced professionals?
-Answer: Absolutely! CareerCraft caters to job seekers at all career stages, offering tailored insights and guidance to enhance their resume and advance their careers.
+Answer: Yes, CareerCraft is designed to assist job seekers at all career stages. Whether you're just starting out or are a seasoned professional, CareerCraft offers tailored insights and guidance to refine your resume, highlight your strengths, and position you as a strong candidate for the roles you’re targeting.
+
+Question: How does CareerCraft ensure my resume is ATS-friendly?
+Answer: CareerCraft analyzes your resume with ATS optimization in mind. It checks for the presence of industry-specific keywords, assesses formatting to ensure it is compatible with ATS systems, and suggests improvements to enhance readability and keyword density, helping your resume pass through automated filters and reach human recruiters.
+
+Question: What makes CareerCraft different from other resume analysis tools?
+Answer: CareerCraft stands out due to its integration with Google Gemini’s advanced AI capabilities, offering not just keyword analysis but also comprehensive resume optimization tailored to your specific job goals.
+
 """
 que, ans = [], []
 for line in faqs.split("\n"):
@@ -151,18 +170,11 @@ for line in faqs.split("\n"):
         que.append(line)
     elif line.startswith("Answer:"):
         ans.append(line)
-col1, col2 = st.columns((2,3))
-with col2:
-    st.markdown("<h1 style='text-align: center;'>FAQs</h1>", unsafe_allow_html=True)
-    for i in range(len(que)):
-        st.write(f"{que[i]}")
-        st.write(f'''{ans[i]}''')
-        avs.add_vertical_space(3)
 
-    
+st.markdown("<h1 style='text-align: center;'>FAQs</h1>", unsafe_allow_html=True)
+for i in range(len(que)):
+    st.write(f"### {que[i]}")
+    st.write(f'''{ans[i]}''')
+    '''---'''
+    avs.add_vertical_space(1)
 
-
-with col1:
-    img3 = Image.open("images/icon3.png")
-    st.image(img3, use_column_width=True)
-    
