@@ -13,7 +13,7 @@
 
 ## Demo
 
-Check out the live demo of the app: [CareerCraft](https://career-craft.streamlit.app/)
+Check out the live demo of the app: [CareerCraft](https://career-craft.azurewebsites.net/)
 
 ## Installation
 
