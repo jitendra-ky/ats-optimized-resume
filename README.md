@@ -3,7 +3,7 @@
 **ATS-Optimized-Resume** is a Streamlit application named **CareerCraft** that utilizes the capabilities of the Google Gemini model to analyze resumes against specific job descriptions. This tool helps job seekers optimize their resumes for Applicant Tracking Systems (ATS) by identifying keyword matches and providing personalized recommendations to enhance compatibility with the desired job roles.
 
 
-Check out this [YouTube video](https://www.youtube.com/embed/-C5RDNQNT1c?si=cLZkwtrf2WuIh2ji)!
+Check out this [YouTube video](https://youtu.be/-C5RDNQNT1c?si=ywv73oXUJiBLDbwv)!
 
 
 ## Features
