@@ -58,25 +58,7 @@ def input_pdf_text(file_name):
     return text
 
 def analyse_resume(resume_txt, job_description):
-    prompt=f"""
-    As an experienced ATS (Applicant Tracking System), proficient in the technical domain encompassing
-    Software Engineering, Data Science, Data Analysis, Big Data Engineering, Web Developer, Mobile App
-    Developer, Devops Engineer, Machine Learning Engineer, Cybersecurity Analyst, Cloud Solutions Architect,
-    Database Administrator, Network Engineer, AI Engineer, Systems Analyst, Full Stack Developer, UI/UX
-    Designer, IT Project Manager, and additional specialized areas, your objective is to meticulously assess
-    resumes against provided job descriptions. In a fiercely competitive job market, your expertise is crucial
-    in offering top-notch guidance for resume enhancement. Assign precise matching percentages based on the JD
-    (Job Description) and meticulously identify any missing keywords with utmost accuracy.
-    resume : {resume_txt}
-    description: {job_description}
-
-    I want the response in the following structure:
-    The first line indicates the percentage match with the job description (JD).
-    The second line presents a list of missing keywords.
-    The third section provides a profile summary.
-    Mention the title for all the three sections.
-    while generating the response put some space to separate all the three sections.
-    """
+    prompt = open('prompt.md', 'r').read()
     return get_gemini_response(prompt)
 
 
