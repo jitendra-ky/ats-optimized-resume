@@ -126,6 +126,7 @@ Microsoft is an equal opportunity employer. Consistent with applicable law, all 
 ```
 
 # YOUR OUTPUT 
+this output is only for the give example of Resume and Job description. just giving u a better understanding that which type of output u have to give
 
 ## Match Percentage 70%
 
@@ -142,3 +143,20 @@ Microsoft is an equal opportunity employer. Consistent with applicable law, all 
 ## Profile Summary
 
 The resume shows a solid foundation in web development, machine learning, and problem-solving with notable projects and achievements. However, it lacks specific experience and skills that align with the Microsoft 365 Lighthouse role, such as proficiency in C++, C#, and Golang, experience with UI frameworks like Angular, and familiarity with Agile development methodologies. Additionally, the resume does not mention direct experience with debugging code in production systems or the required 2+ years of professional software engineering experience. Expanding the resume to include these aspects and tailoring it to the job description will improve alignment with the role.
+
+
+# here are the user detail you have to give output for
+
+## USER JOB DESCRIPTION
+
+```
+{{resume-8765}}
+```
+
+
+## USER RESUME
+
+```
+{{job_description_58945}}
+```
+

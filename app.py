@@ -59,6 +59,9 @@ def input_pdf_text(file_name):
 
 def analyse_resume(resume_txt, job_description):
     prompt = open('prompt.md', 'r').read()
+    prompt = prompt.replace("{{resume-8765}}", resume_txt)
+    prompt = prompt.replace("{{job_description_58945}}", job_description)
+    
     return get_gemini_response(prompt)
 
 
