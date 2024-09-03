@@ -54,4 +54,4 @@ jobs:
         with:
           azcliversion: latest
           inlineScript: |
-            az webapp restart --name st-sih-1134 --resource-group sih-ps
+            az webapp restart --name career-craft --resource-group career-craft-res-gp
