@@ -35,12 +35,26 @@ def get_gemini_response(prompt):
     st.write("Response generated!")
     return response.text
 
-def input_pdf_text(uploaded_file):
-    reader = PyPDF2.PdfReader(uploaded_file)
-    text = ''
-    for page_num in range(len(reader.pages)) :
-        page = reader. pages[page_num]
-        text += str(page.extract_text)
+def input_pdf_text(file_name):
+    try:
+        # Open the PDF file in binary mode
+        with open(file_name, 'rb') as file:
+            # Create a PDF reader object
+            pdf_reader = PyPDF2.PdfReader(file)
+            
+            # Initialize a variable to store the text content
+            text = ""
+            
+            # Iterate through all the pages and extract the text
+            for page_num in range(len(pdf_reader.pages)):
+                page = pdf_reader.pages[page_num]
+                text += page.extract_text()
+            
+            return text
+    except FileNotFoundError:
+        return "File not found. Please check the file name and try again."
+    except Exception as e:
+        return f"An error occurred: {e}"
     return text
 
 def analyse_resume(resume_txt, job_description):
