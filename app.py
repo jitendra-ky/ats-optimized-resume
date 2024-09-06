@@ -15,6 +15,7 @@ st.set_page_config(
     layout="wide",
 )
 st.title("📃 CareerCraft")
+st.write(1.1)
 
 # Display a message with a LinkedIn profile link
 st.write("Developed by [Jitendra-Kumar](https://www.linkedin.com/in/jitendra-ky)")
@@ -22,8 +23,7 @@ st.write("Developed by [Jitendra-Kumar](https://www.linkedin.com/in/jitendra-ky)
 
 avs.add_vertical_space(4)
 
-# key = os.getenv('GOOGLE_API_KEY')
-key ="AIzaSyA7DPMBYgeuLSySIB7hDHNeF8qFahSjzB4"
+key = os.getenv('GOOGLE_API_KEY')
 genai.configure(api_key=key)
 
 
